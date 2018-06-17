@@ -38,3 +38,7 @@ data: {
 
 &lt;whcg-chart&gt; is a Polymer 3 element with the following dependencies: 
 - *npm i @polymer/polymer*
+- script tag in the head of index.html:
+```html
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js">
+```
