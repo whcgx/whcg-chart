@@ -28,11 +28,11 @@ class WhcgChart extends PolymerElement {
                 readOnly: false,
             },
     
-            jsondata: {
+            chartjson: {
                 type: String,
                 notify: false,
                 readOnly: false,
-                observer: '_jsondataChanged'
+                observer: '_chartjsonChanged'
             },
             width: {
                 type: String,
@@ -69,9 +69,9 @@ class WhcgChart extends PolymerElement {
         }
     }
 
-    _jsondataChanged() {
+    _chartjsonChanged() {
       
-        this._chartJs(JSON.parse(this.jsondata));
+        this._chartJs(JSON.parse(this.chartjson));
     }
 
     _chartJs(data) {
