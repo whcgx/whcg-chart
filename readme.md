@@ -1,7 +1,7 @@
 # &lt;whcg-chart&gt;
 
 ```html
-<whcg-chart type="line" width="800px" height="300px" legendposition="right" legendfontsize="10" legendfontfamily="Helvetica" jsondata="{{chartJsJson}}"></whcg-chart>
+<whcg-chart type="line" width="800px" height="300px" legendposition="right" legendfontsize="10" legendfontfamily="Helvetica" chartjson="{{chartJsJson}}"></whcg-chart>
 ```
 
 ## Getting started 
