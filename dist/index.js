@@ -70,15 +70,24 @@ class WhcgChart extends polymerElement_js.PolymerElement {
                 readOnly: false,
                 value: 'Arial' 
             },
+
+            stacked: {
+                type: Boolean,
+                notify: false,
+                readOnly: false,
+                value: false 
+            },
         }
     }
 
     _chartjsonChanged() {
-      
+        console.log('chartJsonChanged');
         this._chartJs(JSON.parse(this.chartjson));
     }
 
     _chartJs(data) {
+        console.log('data');
+        console.log(data);
         var ctx = this.$.myChart;
         var myChart = new Chart(ctx, {
             type: this.type,
@@ -97,7 +106,21 @@ class WhcgChart extends polymerElement_js.PolymerElement {
                             beginAtZero:true
                         }
                     }]
-                }
+                },
+                // scales: {
+                //     xAxes: [{
+                //         stacked: this.stacked
+                //     }],
+                //     yAxes: [{
+                //         stacked: this.stacked
+                //     }
+                //     // {
+                //     //     ticks: {
+                //     //         beginAtZero: true
+                //     //     }
+                //     // }
+                // ]
+                // }
             }
         });
     }
