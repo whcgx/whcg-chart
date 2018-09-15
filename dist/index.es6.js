@@ -12,12 +12,12 @@ class WhcgChart extends PolymerElement {
         return html`
         <style>
         .thediv {
-            --_lumo-grid-border-color: var(--whcg-shade-20pct);
+            /* --_lumo-grid-border-color: var(--whcg-shade-20pct);
             --_lumo-grid-secondary-border-color: var(--whcg-shade-10pct);
             --_lumo-grid-border-width: 1px;
-            --_lumo-grid-selected-row-color: var(--parmaco-primary-color-10pct);
+            --_lumo-grid-selected-row-color: var(--parmaco-primary-color-10pct); */
             font-size: var(--parmaco-font-size-m);
-            border: var(--_lumo-grid-border-width) solid var(--_lumo-grid-border-color);
+            border: 1px solid var(--whcg-shade-20pct);
             border-radius: 5px 5px 4px 4px;
             background-color: var(--whcg-shade-10pct);
         }
@@ -94,11 +94,11 @@ class WhcgChart extends PolymerElement {
     }
 
     _chartJs(data) {
-        console.log('data');
-        console.log(data);
+        // console.log('data');
+        // console.log(data);
         var ctx = this.$.myChart;
-        console.log("ctx");
-        console.log(ctx);
+        // console.log("ctx");
+        // console.log(ctx);
         
         //Chart.defaults.global.defaultFontColor = 'white';
         //Chart.defaults.global.elements.rectangle.backgroundColor = 'hsla(24, 70%, 50%, 1)';
@@ -108,8 +108,8 @@ class WhcgChart extends PolymerElement {
 
         //ctx.style.backgroundColor = "hsla(214, 50%, 22%, 0.1)";
 
-        console.log('this');
-        console.log(this);
+        // console.log('this');
+        // console.log(this);
 
         if (this.thechart != null) {
             this.thechart.destroy();
