@@ -85,7 +85,7 @@ export class WhcgChart extends PolymerElement {
     }
 
     _chartjsonChanged() {
-        console.log("chartJsonChanged");
+        // console.log("chartJsonChanged");
         
         this._chartJs(JSON.parse(this.chartjson));
         // setInterval(function() {
